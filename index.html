@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Filter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <div
+      class="h-screen w-full flex flex-col bg-center bg-no-repeat text-white bg-[url('https://images.pexels.com/photos/29145562/pexels-photo-29145562/free-photo-of-modern-urban-apartment-building-in-daylight.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load')]"
+    >
+      <h1
+        class="text-center text-black text-white pt-5 text-3xl mt-2 font-semibold tracking-wider"
+      >
+        Search Filter
+      </h1>
+
+      <div class="flex flex-col mx-auto h-screen items-center justify-center">
+        <input
+          class="border-2 border-white text-black m-2 p-2 w-full placeholder:text-pink-500"
+          type="text"
+          id="searchBox"
+          placeholder="Search Fruits..."
+          onkeyup="filterList()"
+        />
+        <div
+          class="place-items-center bg-green-400 duration-200 text-center w-full animation-linear hover:bg-green-500 text-white border-2 border-white rounded-full px-2"
+        >
+          Click
+        </div>
+        <ul id="list" class="flex flex-wrap w-72 gap-2 m-2"></ul>
+
+        <script src="script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
