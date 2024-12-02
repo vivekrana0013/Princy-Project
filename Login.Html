@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function handleLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Dummy login credentials
+            const dummyUsername = 'admin';
+            const dummyPassword = 'password123';
+
+            if (username === dummyUsername && password === dummyPassword) {
+                // Redirect to index.html on successful login
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-200">
+    <div class="bg-white p-6 rounded shadow-md w-80">
+        <h2 class="text-center text-2xl mb-4">Admin Login</h2>
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            class="border-2 border-gray-300 p-2 w-full mb-4"
+        />
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="border-2 border-gray-300 p-2 w-full mb-4"
+        />
+        <button
+            onclick="handleLogin()"
+            class="bg-blue-500 text-white rounded px-4 py-2 w-full"
+        >
+            Sign In
+        </button>
+    </div>
+</body>
+</html>
